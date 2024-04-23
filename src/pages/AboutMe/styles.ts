@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const AboutMeContainer = styled.section`
   width: 100vw;
@@ -79,7 +79,7 @@ export const Title = styled.h2`
   }
 `;
 export const Description = styled.p`
-font-size: clamp(0.8em, calc(0.9em + 0.2vw), 1.2em);
+  font-size: clamp(0.8em, calc(0.9em + 0.2vw), 1.2em);
   /* width: 80%; */
   width: 100%;
   /* font-size: 1em; */

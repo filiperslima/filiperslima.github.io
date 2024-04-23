@@ -1,5 +1,5 @@
 
-import { ContactContainer, Inner, Outter } from "./styles";
+import { ContactContainer } from "./styles";
 import { ContactCardComponent } from "../../components/ContactCardComponent";
 import { SectionTitleComponent } from "../../components/SectionTitleComponent";
 

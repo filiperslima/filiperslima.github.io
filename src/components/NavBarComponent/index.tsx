@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { LinksContainer, LogoContent, NavBarContainer, NavigationLink } from "./styles";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { Link } from 'react-scroll';
-
 
 interface StatusModal {
     status?: 'show' | 'hiding' | 'hidden';

@@ -1,29 +1,24 @@
-import { ActualImage, ActualItemContainer, ButtonContainer, CarouselContainer, CarouselItem, DescriptionContainer, GalleryContainer, LinksContent, ProjectDescription, ProjectName, Subtitle, ToolsContent, UsedToolsContainer } from "./styles";
-import { Fragment, useRef, useState } from "react";
+import { ActualImage, ActualItemContainer, DescriptionContainer, GalleryContainer, LinksContent, ProjectDescription, ProjectName, ToolsContent } from "./styles";
+import { Fragment, useState } from "react";
 import { BsReverseLayoutTextWindowReverse, BsGithub } from "react-icons/bs";
 import { ComingSoonComponent } from "../ComingSoonComponent";
-import { useDraggable } from "react-use-draggable-scroll";
 import RotatingCubeButton from "../RotatingCubeButtonComponent";
 import CarouselComponent from "../CarouselComponent";
-
-
-interface GalleryComponentProps {
+export interface GalleryComponentProps {
     id: number,
-    name: string,
-    description: string,
+    name?: string,
+    description?: string,
     usedTools: string[],
-    image: string,
+    image?: string,
     isCompleted: boolean,
-    link: string
+    link?: string
 }
 interface Props {
     GalleryData: GalleryComponentProps[]
 }
-
 export interface ICurrentItem {
     current: number
 }
-
 export function GalleryComponent({ GalleryData }: Props) {
     const [currentItem, setCurrentItem] = useState<ICurrentItem>({ current: 1 })
     const updateCurrentItem = (newState: ICurrentItem) => {
@@ -54,14 +49,14 @@ export function GalleryComponent({ GalleryData }: Props) {
                         <RotatingCubeButton visible={GalleryData.find((item) => { return item.id === currentItem.current })?.isCompleted ?? false}>
                             <RotatingCubeButton.Icon> <BsGithub /></RotatingCubeButton.Icon>
                             <RotatingCubeButton.Main>
-                                <RotatingCubeButton.Visible>{GalleryData.find(item =>{return item.id === currentItem.current})?.isCompleted ? 'Código fonte' : 'Em breve'}</RotatingCubeButton.Visible>
+                                <RotatingCubeButton.Visible>{GalleryData.find(item => { return item.id === currentItem.current })?.isCompleted ? 'Código fonte' : 'Em breve'}</RotatingCubeButton.Visible>
                                 <RotatingCubeButton.Hidden href={GalleryData.find((item) => { return item.id === currentItem.current })?.link ?? 'https://github.com/filiperslima'}> Abrir no Github</RotatingCubeButton.Hidden>
                             </RotatingCubeButton.Main>
                         </RotatingCubeButton>
                         <RotatingCubeButton visible={GalleryData.find((item) => { return item.id === currentItem.current })?.isCompleted ?? false}>
                             <RotatingCubeButton.Icon> <BsReverseLayoutTextWindowReverse /></RotatingCubeButton.Icon>
                             <RotatingCubeButton.Main>
-                                <RotatingCubeButton.Visible>{GalleryData.find(item =>{return item.id === currentItem.current})?.isCompleted ? 'Demonstração' : 'Em breve'}</RotatingCubeButton.Visible>
+                                <RotatingCubeButton.Visible>{GalleryData.find(item => { return item.id === currentItem.current })?.isCompleted ? 'Demonstração' : 'Em breve'}</RotatingCubeButton.Visible>
                                 <RotatingCubeButton.Hidden href={GalleryData.find((item) => { return item.id === currentItem.current })?.link ?? 'https://github.com/filiperslima'}> Abrir site</RotatingCubeButton.Hidden>
                             </RotatingCubeButton.Main>
                         </RotatingCubeButton>

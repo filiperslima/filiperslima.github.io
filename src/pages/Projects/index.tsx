@@ -1,11 +1,9 @@
-import { GalleryComponent } from "../../components/GalleryComponent";
-import { section } from "./styles";
+import { GalleryComponent, GalleryComponentProps } from "../../components/GalleryComponent";
 import ToDo from '../../assets/ToDo copiar.png'
 import PetShop from '../../assets/PetShop.png'
-import { Fragment } from "react/jsx-runtime";
 import { SectionTitleComponent } from "../../components/SectionTitleComponent";
 
-export const GalleryData = [{
+export const GalleryData: GalleryComponentProps[] = [{
     id: 1,
     name: 'To-Do App',
     description: 'Apresentando TarefaFácil, seu companheiro definitivo de produtividade! Organize suas tarefas, defina prazos e prioridades de forma intuitiva. Com recursos personalizáveis e listas adaptáveis, mantenha-se no controle de seus compromissos em qualquer lugar, a qualquer momento.',
@@ -26,37 +24,37 @@ export const GalleryData = [{
 },
 {
     id: 3,
-    name: null,
-    description: null,
+    name: undefined,
+    description: undefined,
     usedTools: [],
-    image: null,
+    image: undefined,
     isCompleted: false,
     link: undefined
 },
 {
     id: 4,
-    name: null,
-    description: null,
+    name: undefined,
+    description: undefined,
     usedTools: [],
-    image: null,
+    image: undefined,
     isCompleted: false,
     link: undefined
 },
 {
     id: 5,
-    name: null,
-    description: null,
+    name: undefined,
+    description: undefined,
     usedTools: [],
-    image: null,
+    image: undefined,
     isCompleted: false,
     link: undefined
 },
 {
     id: 6,
-    name: null,
-    description: null,
+    name: undefined,
+    description: undefined,
     usedTools: [],
-    image: null,
+    image: undefined,
     isCompleted: false,
     link: undefined
 },

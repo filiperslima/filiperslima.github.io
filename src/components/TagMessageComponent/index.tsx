@@ -1,6 +1,6 @@
 import { TagMessageContainer, TagMessageContent } from "./styles"
-import { PiLinkedinLogoThin, PiGithubLogoThin } from "react-icons/pi";
-import { LiaLinkedin, LiaGithubSquare } from "react-icons/lia";
+import { PiGithubLogoThin } from "react-icons/pi";
+
 
 import { RiLinkedinLine } from "react-icons/ri";
 
@@ -23,12 +23,12 @@ export function TagMessageComponent() {
 
                 <div>
                     <a href="https://www.linkedin.com/in/filipe-rodrigues-7433a01b9/" target="_blank">
-                    <RiLinkedinLine/>
+                        <RiLinkedinLine />
                     </a>
                     <a href="https://github.com/filiperslima" target="_blank">
-                    <PiGithubLogoThin />
+                        <PiGithubLogoThin />
                     </a>
-                    
+
                 </div>
 
 

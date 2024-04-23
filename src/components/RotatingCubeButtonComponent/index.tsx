@@ -1,4 +1,3 @@
-import { BsGithub, BsReverseLayoutTextWindowReverse } from "react-icons/bs";
 import { ButtonContainer } from "./styles";
 import { ReactNode } from "react";
 

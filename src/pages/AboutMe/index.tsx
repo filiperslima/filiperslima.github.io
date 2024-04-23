@@ -1,6 +1,6 @@
 import { ProfileCardComponent } from "../../components/ProfileCardComponent";
-import { AboutMeContainer, Description, DescriptionContent, DescriptionContainer, Title, Skill } from "./styles";
-import { IoLogoReact, IoLogoCss3, IoLogoJavascript, IoLogoHtml5, } from "react-icons/io5";
+import { AboutMeContainer, Description, DescriptionContent, DescriptionContainer, Skill } from "./styles";
+import { IoLogoReact, IoLogoCss3, IoLogoHtml5, } from "react-icons/io5";
 import { SiBootstrap, SiSpringboot, SiMysql, SiGit } from "react-icons/si";
 import { DiJavascript } from "react-icons/di";
 import { SectionTitleComponent } from "../../components/SectionTitleComponent";
@@ -13,7 +13,7 @@ export function AboutMe() {
             <AboutMeContainer className="about-me">
                 <DescriptionContainer>
                     <DescriptionContent variant='profile'>
-                    <SectionTitleComponent section="Sobre mim"/>
+                        <SectionTitleComponent section="Sobre mim" />
                         <Description>
                             {`Técnico em Desenvolvimento de Sistemas, pós-graduado em Segurança da Informação \n
                     e certificado como Professional Developer pela Digital House. \n
@@ -23,7 +23,7 @@ export function AboutMe() {
                     </DescriptionContent>
 
                     <DescriptionContent variant="skills">
-                    <SectionTitleComponent section="Habilidades"/>
+                        <SectionTitleComponent section="Habilidades" />
                         <div className="skillsContainer">
                             <Skill>
                                 <IoLogoHtml5 />
